@@ -2,24 +2,22 @@
 
 int main()
 {
-    int score;
-    int cnt[11] = {0};
-
-    while(1) 
+    for (int i=1; i <= 3; i++)
     {
-        scanf("%d", &score);
-
-        if (score == 0)
-            break;
-        
-        cnt[score / 10]++;
+        for (int j=0; j < i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
     }
 
-    for (int i = 10; i >= 0; i--)
+        for (int i=3; i >= 1; i--)
     {
-        if (cnt[i] > 0)
-            printf("%d : %d person\n", i * 10, cnt[i]);
+        for (int j=0; j < i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
     }
-
     return 0;
 }

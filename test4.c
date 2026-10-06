@@ -2,27 +2,20 @@
 
 int main()
 {
-    int A, B, C;
-    int count[10] = {0};
-    int result;
-
-    scanf("%d", &A);
-    scanf("%d", &B);
-    scanf("%d", &C);
-
-    result = A * B * C;
-
-    while (result > 0)
+    for (int i = 1; i <= 6; i++)
     {
-        count[result % 10]++;
-        result /= 10;
-    }
+        int star;
 
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%d\n", count[i]);
-    }
+        if (i <=3)
+            star = i;
+        else
+            star = 7 - i;
 
+        for (int j = 1; j <= star; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
     return 0;
 }
-
