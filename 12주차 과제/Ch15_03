@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+struct Me{
+    char name[21];
+    int age;
+};
+
+int main()
+{
+    struct Me me = {"Yejun", 12};
+    struct Me fr;
+
+    scanf("%s %d", fr.name, &fr.age);
+
+    printf("Your name: %s, age: %d\n", me.name, me.age);
+    printf("Friend's name: %s, age: %d\n", fr.name, fr.age);
+}
