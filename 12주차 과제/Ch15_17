@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+struct Student {
+    char name[21];
+    int score[3];
+    int total;
+};
+
+void input(struct Student s[], int n) {
+    for (int i = 0; i < n; i++) {
+        scanf("%s %d %d %d", s[i].name, &s[i].score[0], &s[i].score[1], &s[i].score[2]);
+        s[i].total = s[i].score[0] + s[i].score[1] + s[i].score[2];
+    }
+}
+
+void sort(struct Student s[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - 1 - i; j++) {
+            if (s[j].total < s[j + 1].total) {
+                struct Student tmp = s[j];
+                s[j] = s[j + 1];
+                s[j + 1] = tmp;
+            }
+        }
+    }
+}
+
+void output(struct Student s[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%s %d %d %d %d\n", s[i].name, s[i].score[0], s[i].score[1], s[i].score[2], s[i].total);
+    }
+}
+
+int main() {
+    int n;
+    struct Student s[10];
+
+    scanf("%d", &n);
+
+    input(s, n);
+    sort(s, n);
+    output(s, n);
+
+    return 0;
+}
+// so hard;;
