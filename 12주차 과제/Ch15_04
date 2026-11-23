@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+struct gakko{
+    char school[21];
+    int grade;
+};
+
+int main()
+{
+    struct gakko ex = {"Jejuelementary", 6};
+    struct gakko now;
+
+    scanf("%s %d", now.school, &now.grade);
+    printf("%d grade in %s School\n", ex.grade, ex.school);
+    printf("%d grade in %s School\n", now.grade, now.school);
+}
