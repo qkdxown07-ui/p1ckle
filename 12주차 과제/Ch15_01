@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+struct Person{
+    char name[31];
+    int years;
+};
+
+int main()
+{
+    struct Person p;
+
+    scanf("%s %d", p.name, &p.years);
+    printf("Your name is %s and you are %d years old.\n", p.name, p.years);
+    
+    return 0;
+}
+
