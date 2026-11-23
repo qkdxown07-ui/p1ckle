@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+struct Score {
+    char name[21];
+    int kor;
+    int eng;
+};
+
+struct Score plus(struct Score a, struct Score b) {
+    struct Score r;
+    r.name[0] = '\0';
+    r.kor = a.kor + b.kor;
+    r.eng = a.eng + b.eng;
+    return r;
+}
+
+int main() {
+    struct Score s1, s2, t;
+
+    scanf("%s %d %d", s1.name, &s1.kor, &s1.eng);
+    scanf("%s %d %d", s2.name, &s2.kor, &s2.eng);
+
+    t = plus(s1, s2);
+
+    printf("%s %d %d\n", s1.name, s1.kor, s1.eng);
+    printf("%s %d %d\n", s2.name, s2.kor, s2.eng);
+    printf("Total %d %d\n", t.kor, t.eng);
+
+    return 0;
+}
